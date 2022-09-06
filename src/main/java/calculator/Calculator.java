@@ -1,6 +1,6 @@
 package calculator;
 
-import util.StringUtils;
+import calculator.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;

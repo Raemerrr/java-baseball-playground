@@ -1,6 +1,6 @@
 package calculator;
 
-import util.StringAsInteger;
+import calculator.util.StringAsInteger;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
