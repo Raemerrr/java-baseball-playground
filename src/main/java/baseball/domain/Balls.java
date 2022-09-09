@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Balls {
-    public static final int BALL_SIZE = 3;
     private final List<Ball> balls;
 
     public Balls(List<Integer> numbers) {
@@ -23,8 +22,17 @@ public class Balls {
                 .orElse(BallStatus.NOTHING);
     }
 
+    public PlayResult inning(Balls otherBalls) {
+        PlayResult result = new PlayResult();
+        for (Ball ball : this.balls) {
+            BallStatus status = otherBalls.play(ball);
+            result.report(status);
+        }
+        return result;
+    }
+
     private void checkDuplicateNumbers(List<Integer> numbers) {
-        if (numbers.stream().distinct().count() != BALL_SIZE) {
+        if (numbers.stream().distinct().count() != BaseBallManager.BALL_SIZE) {
             throw new IllegalArgumentException("중복된 숫자를 입력할 수 없습니다.");
         }
     }
