@@ -1,8 +1,7 @@
-import calculator.Calculator;
-import util.StringUtils;
+import baseball.domain.BaseBallManager;
 
 public class Application {
     public static void main(String[] args) {
-        System.out.println(Calculator.run(StringUtils.input()));
+        BaseBallManager.run();
     }
 }

@@ -1,6 +1,6 @@
 package calculator;
 
-import util.StringAsInteger;
+import calculator.util.StringAsInteger;
 
 public class CalcNumber {
     private Number number;
