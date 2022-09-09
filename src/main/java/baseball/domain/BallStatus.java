@@ -14,4 +14,16 @@ public enum BallStatus {
     public String getDescription() {
         return description;
     }
+
+    public boolean isNotNothing() {
+        return this != NOTHING;
+    }
+
+    public boolean isStrike() {
+        return this == STRIKE;
+    }
+
+    public boolean isBall() {
+        return this == BALL;
+    }
 }

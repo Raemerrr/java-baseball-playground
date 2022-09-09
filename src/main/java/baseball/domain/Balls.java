@@ -18,6 +18,7 @@ public class Balls {
     public BallStatus play(Ball otherBall) {
         return this.balls.stream()
                 .map(ball -> ball.compare(otherBall))
+                .filter(BallStatus::isNotNothing)
                 .findFirst()
                 .orElse(BallStatus.NOTHING);
     }
